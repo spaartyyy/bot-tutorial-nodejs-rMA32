@@ -89,17 +89,15 @@ function respond() {
     this.res.writeHead(200);
     postMessage("hes gay");
     this.res.end();
-  
   } 
   else if(request.text && botCookiedance.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("https://media.giphy.com/media/WP1PJnXWQN692/giphy.gif");
+    postMessage("http://i.giphy.com/WP1PJnXWQN692.gif");
     this.res.end();
-  
   } 
   else if(request.text && botCookie.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("https://media.giphy.com/media/rGlTJ85Qqjmog/giphy.gif");
+    postMessage("http://i.giphy.com/rGlTJ85Qqjmog.gif");
     this.res.end();
   } 
   else if(request.text && botHamad.test(request.text)) {
