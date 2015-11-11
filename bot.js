@@ -97,7 +97,7 @@ function respond() {
   } 
   else if(request.text && botCookie.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("http://i.giphy.com/rGlTJ85Qqjmog.gif");
+    postMessage("https://38.media.tumblr.com/f41ef9d622827cb3efbd8346cc989519/tumblr_mpcfgzVurk1qmkdzvo1_400.gif");
     this.res.end();
   } 
   else if(request.text && botHamad.test(request.text)) {
