@@ -8,7 +8,7 @@ function respond() {
       botRegex = /^\/cool guy/;  botRegexDL = /^\/DDL/i;botRegexSalt = /^\/salt/;botRegexYub = /^\/yubnub/
       botRegexAd=/^\/advance/; botRegexGTA = /^\/gta/; botRegexSC = /^\/SDL/i; botODB = /^\odb/i; botDE = /^\/derek/i; botDuck = /^\/duck/;
       botRegexP = /^\/PDL/i;  botRegexTw = /^\/twitch/i; botRegexSb = /^\/sub/; botRegexSh = /^\/shrug/; botRegexWk = /^\/users/;
-      botHamad = /^\/Hamadsdad/; botRing = /^\/ring/;
+      botHamad = /^\/Hamadsdad/; botRing = /^\/ring/; botKeith = /^\/keith/;
   var teamAb = ["NE","NO","ARI","PHI","CLE","TEN","OAK","DAL","IND","SEA","CIN","PIT","JAC"
                 ,"BAL","SD","DEN","MIN","ATL","KC","NYG","GB","DET","HOU","STL","CHI","CAR",
                 "MIA","BUF","SF","WAS","NYJ","TB"]
@@ -98,6 +98,11 @@ function respond() {
   else if(request.text && botHamad.test(request.text)) {
     this.res.writeHead(200);
     postMessage("https://i.imgur.com/4L87fdqh.jpg");
+    this.res.end();
+    } 
+  else if(request.text && botHamad.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage("http://hazeldenbettyford.org");
     this.res.end();
   }
   else {
