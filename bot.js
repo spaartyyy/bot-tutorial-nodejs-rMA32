@@ -100,7 +100,7 @@ function respond() {
     postMessage("https://i.imgur.com/4L87fdqh.jpg");
     this.res.end();
     } 
-  else if(request.text && botHamad.test(request.text)) {
+  else if(request.text && botKeith.test(request.text)) {
     this.res.writeHead(200);
     postMessage("https://hazeldenbettyford.org");
     this.res.end();
