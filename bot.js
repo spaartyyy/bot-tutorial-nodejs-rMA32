@@ -6,7 +6,7 @@ var botID = process.env.BOT_ID;
 function respond() {
   var request = JSON.parse(this.req.chunks[0]),
       botRegex = /^\/cool guy/;  botRegexDL = /^\/DDL/i;botRegexSalt = /^\/salt/;botRegexYub = /^\/yubnub/
-      botRegexAd=/^\/advance/;botRegexGTA = /^\/gta/; botRegexSC = /^\/SDL/i; botODB = /^\odb/i; botDuck = /^\/duck/;
+      botRegexAd=/^\/advance/;botRegexGTA = /^\/gta/; botRegexSC = /^\/SDL/i; botODB = /^\odb/i; botDE = /^\/derek/i; botDuck = /^\/duck/;
       botRegexP = /^\/PDL/i;  botRegexTw = /^\/twitch/i; botRegexSb = /^\/sub/; botRegexSh = /^\/shrug/; botRegexWk = /^\/users/;
   var teamAb = ["NE","NO","ARI","PHI","CLE","TEN","OAK","DAL","IND","SEA","CIN","PIT","JAC"
                 ,"BAL","SD","DEN","MIN","ATL","KC","NYG","GB","DET","HOU","STL","CHI","CAR",
@@ -18,7 +18,7 @@ function respond() {
   } 
   else if(request.text && botRegexDL.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("http://daddyleagues.com/ma32/team/"+request.text.substring(5,8)+"/depthchart");
+    postMessage("http://daddyleagues.com/jcs2/team/"+request.text.substring(5,8)+"/depthchart");
     this.res.end();
   } 
   else if(request.text && botRegexSalt.test(request.text)) {
@@ -43,14 +43,14 @@ function respond() {
   } 
   else if(request.text && botRegexSC.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("http://daddyleagues.com/ma32/team/"+request.text.substring(5,8)+"/schedule");
+    postMessage("http://daddyleagues.com/jcs2/team/"+request.text.substring(5,8)+"/schedule");
     this.res.end();
   }
   else if(request.text && botRegexP.test(request.text)) {
     this.res.writeHead(200);
     var req = request.text.substring(5,request.text.length);
     var rep = req.replace(/ /,"+");
-    postMessage("http://daddyleagues.com/ma32/players?name="+rep+"&position=all&team=all");
+    postMessage("http://daddyleagues.com/jcs2/players?name="+rep+"&position=all&team=all");
     this.res.end();
   }  
 
@@ -83,7 +83,11 @@ function respond() {
     this.res.writeHead(200);
     postMessage("http://media3.giphy.com/media/YCseTHF2I6CCA/giphy.gif");
     this.res.end();
-  
+  } 
+  else if(request.text && botDE.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage("hes gay");
+    this.res.end();
   
   }
   else {
