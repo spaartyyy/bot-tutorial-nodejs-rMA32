@@ -102,7 +102,7 @@ function respond() {
     } 
   else if(request.text && botHamad.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("http://hazeldenbettyford.org");
+    postMessage("https://hazeldenbettyford.org");
     this.res.end();
   }
   else {
